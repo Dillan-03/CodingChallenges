@@ -1,6 +1,6 @@
 #Highest Altitude
 class Solution:
-    def largestAltitude(self, gain) -> int:
+    def largestAltitude(self, gain):
 
         total = []
 
