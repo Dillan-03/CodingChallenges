@@ -4,7 +4,7 @@ A selection of a few coding challenges that I have completed
 ## CodeWars
 - [CodeWars](https://www.codewars.com/) Challenges
 
-##LeetCode
+## LeetCode
 - [LeetCode](https://leetcode.com/problemset/all/) Challenges
 
 ## Project Euler
