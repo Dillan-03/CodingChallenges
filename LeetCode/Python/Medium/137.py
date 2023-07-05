@@ -5,7 +5,7 @@ from collections import Counter
 class Solution:
     def singleNumber(self, nums):
         holder = Counter(nums)
-        print(holder)
+        # print(holder)
 
         for key, value in holder.items():
             if value == 1:
