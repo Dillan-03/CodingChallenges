@@ -1,20 +1,24 @@
 # Valid Parentheses
 class Solution:
     def isValid(self, s: str) -> bool:
-        s = (list(s))
-        letter = 0
-        counter = 0
-        while letter+1 < len(s):
-            if (s[letter] == '(' and s[letter+1] == ')'):
-                counter +=1 
-            if (s[letter] == '{' and s[letter+1] == '}'):
-                counter +=1
-            if (s[letter] == '[' and s[letter+1] == ']'):
-                counter +=1
-         
-            letter += 1
-        # print(counter)
-        # return False
+        if len(s) == 0:
+            return True
+        if len(s) % 2 != 0:
+            return False
+        stack = []
+        for i in s:
+            if i == '(' or i == '{' or i == '[':
+                stack.append(i)
+            elif i == ')':
+                if len(stack) == 0 or stack.pop() != '(':
+                    return False
+            elif i == '}':
+                if len(stack) == 0 or stack.pop() != '{':
+                    return False
+            elif i == ']':
+                if len(stack) == 0 or stack.pop() != '[':
+                    return False
+        return len(stack) == 0
 
 x = Solution()
-print(x.isValid('(){}}{'))
+print(x.isValid('(){}{}'))
