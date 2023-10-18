@@ -7,12 +7,12 @@
 #         self.right = right
 class Solution:
     def searchBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
-        if (root == null):
-            return null
+        if (root == None):
+            return None
         if (root.val == val):
             return root
 
         if (val < root.val):
-            searchBST(root.left, val)
+            return self.searchBST(root.left, val)
         else:
-            searchBST(root.right, val)
+            return self.searchBST(root.right, val)
